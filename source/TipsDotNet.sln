@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tip02", "Tip02", "{AA923A35-9C41-47E5-9A43-577F9F1AB1EB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tip03", "Tip03", "{AA923A35-9C41-47E5-9A43-577F9F1AB1EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipsConsole", "TipsConsole\TipsConsole.csproj", "{163326A3-0A9E-4C20-9FBF-996F84C27E50}"
 EndProject
