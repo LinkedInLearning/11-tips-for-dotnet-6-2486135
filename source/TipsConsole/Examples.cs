@@ -23,7 +23,7 @@ namespace TipsConsole {
 
             // this works, but is not optimal
 
-            var colorsA = brands.Select(x => x.Colors).ToList();
+            List<List<string>> colorsA = brands.Select(x => x.Colors).ToList();
             Console.WriteLine(colorsA);
 
             foreach (var colors in colorsA)
@@ -35,7 +35,7 @@ namespace TipsConsole {
             }
             // flatten
 
-            var colorsB = brands.SelectMany(x => x.Colors).ToList();
+            List<string> colorsB = brands.SelectMany(x => x.Colors).ToList();
             foreach (var color in colorsB)
             {
                 Console.WriteLine(color);
