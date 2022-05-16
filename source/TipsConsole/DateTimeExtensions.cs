@@ -7,10 +7,23 @@ using System.Threading.Tasks;
 namespace TipsConsole {
   public static class DateTimeExtensions {
 
-    public static DateOnly LastDayOfMonth(this DateOnly dt) {
-      var days = DateTime.DaysInMonth(dt.Year, dt.Month);
-      return new DateOnly(dt.Year, dt.Month, days);
+    public static DateOnly LastDayOfMonth(this DateOnly candidate) {
+      var days = DateTime.DaysInMonth(candidate.Year, candidate.Month);
+      return new DateOnly(candidate.Year, candidate.Month, days);
     }
 
+    public static DateOnly LastDayOfMonth2(this DateOnly candidate) {
+
+      return new DateOnly(candidate.Year, candidate.Month, 1).AddMonths(1).AddDays(-1);
+    }
+    public static bool IsLastDayOfMonth(this DateOnly candidate) {
+
+      return candidate == candidate.LastDayOfMonth();
+    }
+
+    public static bool RangeInterects(this DateOnly rangeStart, DateOnly rangeEnd, DateOnly otherRangeStart, DateOnly otherRangeEnd) {
+
+      return rangeStart < rangeEnd && otherRangeStart < otherRangeEnd;
+    }
   }
 }
