@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+		<PublishSingleFile>true</PublishSingleFile>
+		<!--<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+    <Page Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Effects\ColorToneEffect.ps" />
+    <None Remove="Effects\MirrorHorizontalEffect.ps" />
+    <None Remove="Effects\MonochromeEffect.ps" />
+    <None Remove="Effects\RippleEffect.ps" />
+    <None Remove="Effects\ToonShaderEffect.ps" />
+    <None Remove="Image1.jpg" />
+    <None Remove="Images\Image1.jpg" />
+    <None Remove="Images\Image2.jpg" />
+    <None Remove="PixelSmithLogo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image1.jpg" />
+    <Resource Include="Images\Image1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Effects\ColorToneEffect.ps">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Effects\MirrorHorizontalEffect.ps">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Effects\MonochromeEffect.ps">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Effects\RippleEffect.ps">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Effects\ToonShaderEffect.ps">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Image2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="PixelSmithLogo.jpg" />
+  </ItemGroup>
+
+</Project>

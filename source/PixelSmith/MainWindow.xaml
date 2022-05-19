@@ -1,0 +1,87 @@
+﻿<Window x:Class="PixelSmith.MainWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:PixelSmith"
+				mc:Ignorable="d"
+				Title="MainWindow"
+			
+				WindowState='Maximized' FontSize='18'>
+  <Window.Resources>
+    <Image x:Key="Image1">
+			<Image.Source>
+				<ImageSource>/Images/Image1.jpg</ImageSource>
+			</Image.Source>
+		</Image>
+    <Image x:Key="Image2">
+      <Image.Source>
+        <BitmapImage UriSource="Images/Image2.jpg"></BitmapImage>
+      </Image.Source>
+    </Image>
+  </Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height='Auto' />
+			<RowDefinition Height='96*' />
+			<RowDefinition Height='5*' />
+		</Grid.RowDefinitions>
+		<Menu Margin='0,0,0.4,-0.4'>
+			<MenuItem Header='File'>
+				<MenuItem Header='Open' />
+        <MenuItem Header='Seashore' Click='Seashore_Click'
+                  />
+        <MenuItem Header='Staircase' Click='Staircase_Click'
+                  />
+
+        <MenuItem Header='Exit' />
+			</MenuItem>
+			<MenuItem Header='Effects'>
+				<MenuItem Header='None'
+									x:Name='NoEffectMenu'
+									Click='NoEffectMenu_Click' />
+				<MenuItem Header='Color Tone'
+									x:Name='ColorToneMenu'
+									Click='ColorToneMenu_Click' />
+				<MenuItem Header='Toon'
+									x:Name='ToonMenu'
+									Click='ToonMenu_Click' />
+				<MenuItem Header='Monochrome'
+									x:Name='MonochromeMenu'
+									Click='MonochromeMenu_Click' />
+				<MenuItem Header='Mirror'
+									x:Name='MirrorMenu'
+									Click='MirrorMenu_Click' />
+				<MenuItem Header='Ripple'
+									x:Name='RippleMenu'
+									Click='RippleMenu_Click' />
+			</MenuItem>
+			<MenuItem Header='Other'>
+				<MenuItem Header='About'
+									x:Name='AboutMenu'
+									Click='AboutMenu_Click' />
+				<MenuItem Header='Animated'
+									x:Name='AnimatedMenu'
+									Click='AnimatedMenu_Click' />
+				
+
+			</MenuItem>
+
+		</Menu>
+		<Image Source='Images/Image1.jpg'
+					 x:Name='mainImage'
+					 Margin='0,0.4,0.4,-0.2'
+					 Grid.Row='1'
+					 Stretch='UniformToFill'
+					  />
+		<Line Stroke='LightGray' Grid.Row='1'
+					StrokeThickness='1'
+					x:Name='lineX' />
+		<Line Stroke='LightGray'
+					StrokeThickness='1'
+					x:Name='lineY'
+					Grid.Row='1' />
+
+		<TextBlock x:Name='PostionTextBlock' Text=' - -' Grid.Row='2' HorizontalAlignment='Center'/>
+	</Grid>
+</Window>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="PixelSmith.SplashWindow"
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+				xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:local="clr-namespace:PixelSmith"
+				mc:Ignorable="d"
+				Title="SplashWindow" WindowStartupLocation='CenterScreen'>
+	<Grid>
+		<local:SplashBackground Grid.Row='0' />
+		<Grid Margin='20'>
+			<Grid.RowDefinitions>
+				<RowDefinition Height='Auto' />
+				<RowDefinition Height='Auto' />
+
+			</Grid.RowDefinitions>
+
+			<TextBlock FontSize='90'
+								 VerticalAlignment='Center'
+								 FontFamily='{Binding ElementName=titleText, Mode=OneWay}'
+								 TextWrapping='Wrap'
+								 Text='{Binding ElementName=titleText, Path=Text}'
+								 HorizontalAlignment='Center'
+								 Foreground='Black'>
+				<TextBlock.Effect>
+					<BlurEffect  Radius='20'></BlurEffect>
+				</TextBlock.Effect>
+			</TextBlock>
+
+			<TextBlock x:Name='titleText'
+								 FontFamily='Candara'
+								 VerticalAlignment='Center'
+								 FontSize='87'
+								 Margin='2,60'
+								 TextWrapping='Wrap'
+								 Text='PixelSmith'
+								 HorizontalAlignment='Center'
+								 Foreground='PowderBlue' />
+
+			<StackPanel  Grid.Row='1'>
+				<TextBlock FontSize='30'
+									 Foreground='PowderBlue'
+									 HorizontalAlignment='Center'
+									 FontFamily='Candara'>Gradients, Blur Effect, Animations</TextBlock>
+
+			</StackPanel>
+
+		</Grid>
+	</Grid>
+</Window>

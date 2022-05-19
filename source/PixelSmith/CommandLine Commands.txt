@@ -1,0 +1,9 @@
+﻿When publishing a single file exe you *must* include the target OS type.
+So that the exe is bundled for that OS.
+
+dotnet publish -p:PublishSingleFile=true -r win-x64 -c Release --self-contained true -p:IncludeNativeLibrariesForSelfExtract=true
+
+
+-- publish without .NET core runtime  (when users have the runtime)
+
+dotnet publish -p:PublishSingleFile=true -r win-x64 -c Release --self-contained false
