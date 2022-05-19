@@ -21,6 +21,7 @@ namespace TipsConsole {
       // Ilookup value is a IEnumerable
       // ILookup is immutable, no .Add method for example
       // ILookup supports null keys
+      // Lookup by key returns an empty sequence (not an exception!)
       ILookup<CardFamily, CollectableCard> lookupByCardFamily = collectibles.ToLookup(c => c.CardFamily);
       var lookupByPrice = collectibles.ToLookup(c => c.IsDiscounted);
    
@@ -37,6 +38,7 @@ namespace TipsConsole {
           Console.WriteLine($"  { card.Name}");
         }
       }
+      var animals = lookupByCardFamily[CardFamily.Animals];
     }
   }
 
