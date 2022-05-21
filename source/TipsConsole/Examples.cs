@@ -25,7 +25,7 @@ namespace TipsConsole {
       var JulyDate = new DateOnly(year: 2024, month: 7, day: 15);
 
       // Range1 = July 12 to July 31, 
-      // Range2 = June 19 to July 12
+      // Range2 = June 19 to August 31
       bool doIntersect = MidJuly.RangeIntersects(EndOfJuly, MidJune, EndOfAugust);
 
       bool anotherIntersect = EndOfJuly.RangeIntersects(EndOfAugust, JuneFirst, MidJune);
