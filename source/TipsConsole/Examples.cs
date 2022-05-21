@@ -11,7 +11,6 @@ namespace TipsConsole {
 			// GroupBy and ToLookup return a sequence that
 			// has a key (the group) and an inner sequence based on a key field value.
 
-
 			var cardSource = new CardSource();
 			var collectibles = cardSource.CollectibleCards;
 			
