@@ -13,7 +13,7 @@ namespace TipsConsole {
       // this tip looks at file compression (Zipped files).
       // assumes windows OS
 
-      var currentPathToFolder = Path.Combine(Environment.CurrentDirectory, "ZipTheseFiles");
+      var currentPathToFolder = Path.Combine(Environment.CurrentDirectory, "CardImages");
       // get desktop location
       var desktopFolder = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
       System.IO.Compression.ZipFile.CreateFromDirectory(currentPathToFolder, Path.Combine(desktopFolder, @"cards.zip"));
