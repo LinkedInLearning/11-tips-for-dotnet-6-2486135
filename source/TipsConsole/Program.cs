@@ -3,7 +3,8 @@
         static void Main(string[] args) {
             var examples = new Examples();
 
-            examples.RunExample();
+          examples.ZipSomeFiles();
+         examples.UnZipSomeFiles();
 
         }
     }
