@@ -10,7 +10,8 @@ namespace TipsConsole {
 
 
       var examples = new Examples();
-      examples.RunExample();
+      examples.DataChecks();
+     
 
 
     }

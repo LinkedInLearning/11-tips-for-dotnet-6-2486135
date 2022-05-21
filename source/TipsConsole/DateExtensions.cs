@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TipsConsole {
-  public static class DateTimeExtensions {
+  public static class DateExtensions {
 
     public static DateOnly LastDayOfMonth(this DateOnly candidate) {
       var days = DateTime.DaysInMonth(candidate.Year, candidate.Month);
@@ -21,9 +21,9 @@ namespace TipsConsole {
       return candidate == candidate.LastDayOfMonth();
     }
 
-    public static bool RangeInterects(this DateOnly rangeStart, DateOnly rangeEnd, DateOnly otherRangeStart, DateOnly otherRangeEnd) {
+    public static bool RangeIntersects(this DateOnly rangeStart, DateOnly rangeEnd, DateOnly otherRangeStart, DateOnly otherRangeEnd) {
 
-      return rangeStart < rangeEnd && otherRangeStart < otherRangeEnd;
+      return rangeStart < otherRangeEnd && otherRangeStart < rangeEnd;
     }
   }
 }

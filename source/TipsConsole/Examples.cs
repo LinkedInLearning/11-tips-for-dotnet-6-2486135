@@ -7,23 +7,33 @@ using TipsConsole;
 
 namespace TipsConsole {
   internal class Examples {
-    public void RunExample() {
+    public void DataChecks() {
 
-
+      
       var MidJuly = new DateOnly(year: 2024, month: 7, day: 12);
-      var EndAugust = new DateOnly(year: 2024, month: 8, day: 31);
+      var EndOfAugust = new DateOnly(year: 2024, month: 8, day: 31);
       var EndOfJuly = MidJuly.LastDayOfMonth();
 
       Console.WriteLine(EndOfJuly.ToLongDateString());
 
-      var isLastDay = EndAugust.IsLastDayOfMonth();
+      var isLastDay = EndOfAugust.IsLastDayOfMonth();
+
 
       // check for range intersect
-
-      var JuneDate = new DateOnly(year: 2024, month: 6, day: 19);
+      var JuneFirst = new DateOnly(year: 2024, month: 6, day: 1);
+      var MidJune = new DateOnly(year: 2024, month: 6, day: 19);
       var JulyDate = new DateOnly(year: 2024, month: 7, day: 15);
-      bool doIntersect = MidJuly.RangeInterects(EndOfJuly, JuneDate, JulyDate);
+
+      // Range1 = July 12 to July 31, 
+      // Range2 = June 19 to July 12
+      bool doIntersect = MidJuly.RangeIntersects(EndOfJuly, MidJune, EndOfAugust);
+
+      bool anotherIntersect = EndOfJuly.RangeIntersects(EndOfAugust, JuneFirst, MidJune);
+
     }
+
+   
+
   }
 
 }
