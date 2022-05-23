@@ -14,13 +14,11 @@ namespace TipsConsole {
       _treesSold = new List<string>(capacity: 3);
       _flowersSold.Add("Amber Rose");
       _flowersSold.Add("Bluebell");
-
       _flowersSold.Add("Calla Lily");
 
       _treesSold.Add("Alder");
       _treesSold.Add("Birch");
       _treesSold.Add("Cedar");
-
 
     }
 
@@ -28,7 +26,6 @@ namespace TipsConsole {
     {
       get
       {
-
         return _flowersSold.AsEnumerable();
       }
     }
@@ -37,7 +34,6 @@ namespace TipsConsole {
     {
       get
       {
-
         return new ReadOnlyCollection<string>(_treesSold);
       }
     }
