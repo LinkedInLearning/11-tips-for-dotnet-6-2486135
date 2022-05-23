@@ -5,11 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DataLib {
-  public class CustomerSource {
-
+  public class ProductSource {
 
    
-
-
   }
 }

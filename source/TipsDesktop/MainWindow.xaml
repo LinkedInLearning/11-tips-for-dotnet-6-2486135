@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="650"
-        Width="800" FontSize='18'>
+        Width="800" FontSize='18' WindowStartupLocation='CenterScreen' WindowState='Maximized'>
   <TabControl>
     <TabItem Header='Customers'>
       <DataGrid x:Name='CustomerGrid'
@@ -19,6 +19,14 @@
     </TabItem>
     <TabItem Header='Music'>
       <DataGrid x:Name='MusicGrid'
+                ItemsSource='{Binding}'
+                AutoGenerateColumns='True'>
+
+      </DataGrid>
+    </TabItem>
+
+    <TabItem Header='Product'>
+      <DataGrid x:Name='ProductGrid'
                 ItemsSource='{Binding}'
                 AutoGenerateColumns='True'>
 
