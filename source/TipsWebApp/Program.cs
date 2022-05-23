@@ -34,7 +34,7 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast");
 
 
-// Get the Version # for the .NET assembly
+// Get the Version # and file time-stamp for the .NET assembly
 
 app.MapGet("/api-version", () =>
 {
@@ -42,7 +42,7 @@ app.MapGet("/api-version", () =>
 
   var creationDate = File.GetCreationTime(assembly.Location);
   var versionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
-  return $" Version: {versionInfo}, Last updated: {creationDate.ToLongDateString()}, timestamp: ({creationDate.ToString("HH:mm")})";
+  return $" Version: {versionInfo}, Last updated: {creationDate.ToLongDateString()}, time-stamp: ({creationDate.ToString("HH:mm")})";
 })
 .WithName("GetApiVersion");
 app.Run();
