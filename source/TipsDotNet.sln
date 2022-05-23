@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BogusPackage", "BogusPackag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipsConsole", "TipsConsole\TipsConsole.csproj", "{163326A3-0A9E-4C20-9FBF-996F84C27E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLib", "DataLib\DataLib.csproj", "{D829699F-4E79-46F3-A485-2B93E954BB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipsDesktop", "TipsDesktop\TipsDesktop.csproj", "{658A7833-A99C-4B24-8BB6-F7DE77551304}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{163326A3-0A9E-4C20-9FBF-996F84C27E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163326A3-0A9E-4C20-9FBF-996F84C27E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163326A3-0A9E-4C20-9FBF-996F84C27E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D829699F-4E79-46F3-A485-2B93E954BB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D829699F-4E79-46F3-A485-2B93E954BB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D829699F-4E79-46F3-A485-2B93E954BB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D829699F-4E79-46F3-A485-2B93E954BB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658A7833-A99C-4B24-8BB6-F7DE77551304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658A7833-A99C-4B24-8BB6-F7DE77551304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658A7833-A99C-4B24-8BB6-F7DE77551304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658A7833-A99C-4B24-8BB6-F7DE77551304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

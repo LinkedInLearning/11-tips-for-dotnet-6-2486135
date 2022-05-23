@@ -1,0 +1,28 @@
+﻿<Window x:Class="TipsDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TipsDesktop"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="650"
+        Width="800" FontSize='18'>
+  <TabControl>
+    <TabItem Header='Customers'>
+      <DataGrid x:Name='CustomerGrid'
+                ItemsSource='{Binding}' AutoGenerateColumns='True'>
+
+      </DataGrid>
+
+     
+    </TabItem>
+    <TabItem Header='Music'>
+      <DataGrid x:Name='MusicGrid'
+                ItemsSource='{Binding}'
+                AutoGenerateColumns='True'>
+
+      </DataGrid>
+    </TabItem>
+  </TabControl>
+</Window>
