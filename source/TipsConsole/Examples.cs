@@ -19,11 +19,7 @@
     }
 
   
-    public void PrintToConsole(string path) {
-      Console.ForegroundColor = ConsoleColor.White;
-      Console.Write($"{path,30},"); Console.ForegroundColor = ConsoleColor.DarkCyan;
-      Console.WriteLine($"{path.MakePathString(),40}"); Console.ForegroundColor = ConsoleColor.White;
-    }
+ 
   }
 
 }
