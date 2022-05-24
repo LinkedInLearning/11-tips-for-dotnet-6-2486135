@@ -7,15 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="650"
-        Width="800" FontSize='18' WindowStartupLocation='CenterScreen' WindowState='Maximized'>
+        Width="800"
+        FontSize='18'
+        WindowStartupLocation='CenterScreen'
+        WindowState='Maximized'>
   <TabControl>
     <TabItem Header='Customers'>
       <DataGrid x:Name='CustomerGrid'
-                ItemsSource='{Binding}' AutoGenerateColumns='True'>
+                ItemsSource='{Binding}'
+                AutoGenerateColumns='True'>
 
       </DataGrid>
 
-     
     </TabItem>
     <TabItem Header='Music'>
       <DataGrid x:Name='MusicGrid'
@@ -26,11 +29,38 @@
     </TabItem>
 
     <TabItem Header='Product'>
-      <DataGrid x:Name='ProductGrid'
+      <!--<DataGrid x:Name='ProductGrid'
                 ItemsSource='{Binding}'
                 AutoGenerateColumns='True'>
 
-      </DataGrid>
+      </DataGrid>-->
+      <ListBox x:Name='ProductListBox'
+               ItemsSource='{Binding}'
+               MinWidth='300'
+               MaxWidth='430'>
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+
+            <StackPanel>
+              <TextBlock Text='{Binding Name}'
+                         FontSize='18'
+                         FontWeight='Bold'
+                         Foreground='Orange' />
+              <TextBlock Text='{Binding Department}' />
+              <TextBlock Text='{Binding Description}'
+                         FontStyle='Italic'
+                         TextWrapping='Wrap'
+                         Width='360' />
+
+              <TextBlock Text='{Binding Color}' />
+              <Rectangle Height='1'
+                         Width='360'
+                         Fill='DarkGray'
+                         Margin='0,20' />
+            </StackPanel>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
     </TabItem>
   </TabControl>
 </Window>

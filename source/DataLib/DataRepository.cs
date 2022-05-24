@@ -89,7 +89,7 @@ namespace DataLib {
         productFaker.RuleFor(x => x.Description, x => x.Commerce.ProductDescription());
         productFaker.RuleFor(x => x.Department, x => x.Commerce.Department());
 
-        for (int counter = 0; counter < 6; counter++)
+        for (int counter = 0; counter < 5; counter++)
         {
           fakerList.Add(productFaker.Generate());
         }

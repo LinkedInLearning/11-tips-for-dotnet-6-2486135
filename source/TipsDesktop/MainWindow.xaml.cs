@@ -14,7 +14,7 @@ namespace TipsDesktop {
 
       MusicGrid.DataContext = repo.Songs;
 
-      ProductGrid.DataContext = repo.Products;
+      ProductListBox.DataContext = repo.Products;
     }
   }
 }
