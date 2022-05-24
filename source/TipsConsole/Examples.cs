@@ -1,8 +1,10 @@
 ﻿namespace TipsConsole {
   internal class Examples {
     public void GetFileContent() {
-      var fakeRoot = Environment.CurrentDirectory; // Get a cross platform full path
-      var filePath = Path.Join(fakeRoot, "Files", "Readme.txt"); // use Join, not Combine
+      var currentDir = Environment.CurrentDirectory; // Get a cross platform full path
+      var filePath = Path.Join(currentDir, "Files", "Readme.txt"); // use Join, not Combine
+      Console.ForegroundColor = ConsoleColor.DarkRed;
+      Console.WriteLine("-----");
       Console.WriteLine(filePath);
       Console.WriteLine("-----");
       Console.ForegroundColor = ConsoleColor.Cyan;
