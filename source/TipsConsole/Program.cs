@@ -3,7 +3,7 @@
         static void Main(string[] args) {
             var examples = new Examples();
 
-            examples.RunExample();
+            examples.GetFileContent();
 
         }
     }

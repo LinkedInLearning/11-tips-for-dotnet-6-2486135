@@ -1,32 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TipsConsole {
+  internal class Examples {
+    public void GetFileContent() {
+      var fakeRoot = Environment.CurrentDirectory; // Get a cross platform full path
+      var filePath = Path.Join(fakeRoot, "Files", "Readme.txt"); // use Join, not Combine
+      Console.WriteLine(filePath);
+      Console.WriteLine("-----");
+      Console.ForegroundColor = ConsoleColor.Cyan;
 
-namespace TipsConsole {
-    internal class Examples {
-        public void RunExample() {
+      string[] lines = System.IO.File.ReadAllLines(filePath);
+      foreach (string line in lines)
+      {
+        Console.WriteLine(line);
+      }
 
-      Console.WriteLine("Get file path for Linux or Windows.");
-      Console.WriteLine();
-      string path = @"c:\readme.txt";
-      string path2 = @"c:\\files\images\logo.png";
-      string path3 = @"c:\\files\images\..\sales.xlsx";
-
-      string path4 = @"files\images\banner.jpg";
-
-
-      string path5 = @"\files\music\song.wav";
-      string path6 = @".\files\playlists\list.mpu";
-      Console.WriteLine(path.MakePathString());
-      Console.WriteLine(path2.MakePathString());
-      Console.WriteLine(path3.MakePathString());
-      Console.WriteLine(path4.MakePathString());
-      Console.WriteLine(path5.MakePathString());
-      Console.WriteLine(path6.MakePathString());
-
+      Console.WriteLine("-----");
+      Console.ForegroundColor = ConsoleColor.White;
+      Console.ReadLine();
     }
+
+  
+    public void PrintToConsole(string path) {
+      Console.ForegroundColor = ConsoleColor.White;
+      Console.Write($"{path,30},"); Console.ForegroundColor = ConsoleColor.DarkCyan;
+      Console.WriteLine($"{path.MakePathString(),40}"); Console.ForegroundColor = ConsoleColor.White;
     }
+  }
 
 }
